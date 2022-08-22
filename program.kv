@@ -1,0 +1,86 @@
+<MainLayout>:
+    ScreenManager:
+        id: manager
+        Screen:
+            name: 'note'
+            BoxLayout:
+                canvas:
+                    Color:
+                        rgba: .24, .25, .25, 1
+                    Rectangle:
+                        size: manager.size
+                        pos: manager.pos
+                ScrollView:
+                    Note:
+
+
+        Screen:
+            name: 'task'
+            BoxLayout:
+                canvas:
+                    Color:
+                        rgba: .24, .25, .25, 1
+                    Rectangle:
+                        size: manager.size
+                        pos: manager.pos
+        Screen:
+            name: 'setting'
+            BoxLayout:
+                canvas:
+                    Color:
+                        rgba: .24, .25, .25, 1
+                    Rectangle:
+                        size: manager.size
+                        pos: manager.pos
+                Label:
+                    text: 'setting'
+    BoxLayout:
+        id: panel
+        spacing: 2
+        padding: 2
+        orientation: 'vertical'
+        size_hint_x: None
+        width: 55
+        canvas:
+            Color:
+                rgba: 0, 0, 0, 1
+            Rectangle:
+                size: panel.size
+                pos: panel.pos
+        Button:
+            text: 'note'
+            color: 0,0,0,1
+            font_name: 'JackportRegularNcv.ttf'
+            background_color: 1, 1, 1, 1
+            background_normal: ''
+            size_hint: None, None
+            size: 50, 50
+            on_press: manager.current = 'note'
+        Button:
+            text: 'task'
+            color: 0,0,0,1
+            font_name: 'JackportRegularNcv.ttf'
+            background_color: 1, 1, 1, 1
+            background_normal: ''
+            size_hint: None, None
+            size: 50, 50
+            on_press: manager.current = 'task'
+        Button:
+            text: 'setting'
+            color: 0,0,0,1
+            font_name: 'JackportRegularNcv.ttf'
+            background_color: 1, 1, 1, 1
+            background_normal: ''
+            size_hint: None, None
+            size: 50, 50
+            on_press: manager.current = 'setting'
+        Button:
+            text: 'info'
+            color: 0,0,0,1
+            font_name: 'JackportRegularNcv.ttf'
+            background_color: 1, 1, 1, 1
+            background_normal: ''
+            size_hint: None, None
+            size: 50, 50
+            on_press: manager.current = 'info'
+        Widget
